@@ -1,12 +1,9 @@
 import './App.css'
 import "./assets/css/custom.css";
-import Home from './Home'
+import Routes from './routes';
 
 function App() {
-
-  return (
-    <Home />
-  )
+  return <Routes />
 }
 
 export default App
