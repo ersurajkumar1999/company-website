@@ -898,9 +898,10 @@ header.main-header .header-sticky.active{
 .why-choose-us-item{
 	background-color: var(--white-color);
 	border-radius: 40px;
-	padding: 40px;
+	padding: 25px;
 	height: calc(100% - 30px);
     margin-bottom: 30px;
+    text-align: justify;
 }
 
 .why-choose-us-item .icon-box{
@@ -1008,8 +1009,9 @@ header.main-header .header-sticky.active{
 .testimonial-item{
     background-color: var(--white-color);
 	border-radius: 40px;
-    padding: 50px;
+    padding: 25px;
 	height: 100%;
+    text-align:justify;
 }
 
 .testimonial-rating{

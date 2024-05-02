@@ -1,10 +1,9 @@
-
-// import Home from '../Home111';
-// import About from '../Home/About';
-// import Contact from '../Home/Contact';
-// import Page404 from '../Home/Page404';
 import HomeLayout from '../Home/layout/HomeLayout';
 import Home from '../Home/Home';
+import AboutUs from '../Home/AboutUs';
+import Services from '../Home/Services';
+import ContactUs from '../Home/ContactUs';
+import PageNotFound from '../Home/PageNotFound';
 
 
 const HomeRoutes = {
@@ -13,9 +12,10 @@ const HomeRoutes = {
     children: [
         { path: '/', element: <Home /> },
         { path: '/home', element: <Home /> },
-        // { path: '/about', element: <About /> },
-        // { path: '/contact', element: <Contact /> },
-        // { path: '*', element: <Page404 /> },
+        { path: '/about-us', element: <AboutUs /> },
+        { path: '/services', element: <Services /> },
+        { path: '/contact-us', element: <ContactUs /> },
+        { path: '*', element: <PageNotFound /> },
     ]
 };
 
