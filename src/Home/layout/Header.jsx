@@ -1,17 +1,31 @@
-
-import React from 'react'
+import React, { useState } from 'react';
 import logo from "./../../assets/images/logo/logo.svg";
 import { FaAngleDown } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdClose } from "react-icons/md";
+
+
 const Header = () => {
+    const [isMenuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
+    };
+
     return (
         <header className="main-header">
             <div className="header-sticky">
-                <nav className="navbar navbar-expand-lg">
+                <nav className={`navbar navbar-expand-lg ${isMenuOpen ? 'open' : ''}`}>
                     <div className="container">
                         <a className="navbar-brand" href="index.html">
                             <img src={logo} height={50} alt="Logo" />
                         </a>
-                        <div className="collapse navbar-collapse main-menu">
+                        <a className="navbar-toggle" onClick={toggleMenu}>
+                            {
+                                isMenuOpen ? <MdClose  fontSize={'40px'}/> :<GiHamburgerMenu fontSize={'40px'}/>
+                            }
+                        </a>
+                        <div className={`collapse navbar-collapse main-menu ${isMenuOpen ? 'show' : ''}`}>
                             <div className="nav-menu-wrapper">
                                 <ul className="navbar-nav mr-auto" id="menu">
                                     <li className="nav-item submenu"><a className="nav-link" href="index.html">home</a>
@@ -38,17 +52,16 @@ const Header = () => {
                                 </ul>
                             </div>
                             <div className="header-btn d-inline-flex">
-                                <a href="contact-us.html" className="btn-default">free consultation</a>
+                                {/* <a href="contact-us.html" className="btn-default">free consultation</a> */}
+                                <button className="btn-default">free consultation1111</button>
                             </div>
                         </div>
-
-                        <div className="navbar-toggle"></div>
                     </div>
                 </nav>
                 <div className="responsive-menu"></div>
             </div>
         </header>
-    )
+    );
 }
 
-export default Header
+export default Header;

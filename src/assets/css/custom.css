@@ -195,7 +195,7 @@ body{
 }
 
 .btn-default::before{
-	content: '\f062';
+	/* content: '\f062'; */
 	position: absolute;
 	top: 50%;
 	right: 0;
